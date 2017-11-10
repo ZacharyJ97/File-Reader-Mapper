@@ -1,0 +1,5 @@
+Erlich	10101010	Business	1
+Gilfoyle	11111111	Systems Engineering	4
+Dinesh	00000100	Programming	3
+Jared	10010010	Management	4
+Richard	11011011	Software Design	4

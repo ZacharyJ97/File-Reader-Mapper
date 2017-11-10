@@ -10,7 +10,7 @@ class Student
 	//Get functions fully defined in public, set functions defined in Student.cpp
 public:
 	//Default and multi-parameter functions
-	Student(std::string, std::string, std::string, int);
+	Student(std::string, std::string, std::string, std::string);
 	Student();
 	~Student();
 
@@ -24,8 +24,11 @@ public:
 	void setStudentID(const std::string &);
 	std::string getStudentID() const { return stu_id; }
 
-	void setStudentYear(int);
-	int getStudentYear() { return stu_year; }
+	void setStudentYear(const std::string &);
+	std::string getStudentYear() { return stu_year; }
+
+	//Display function
+	std::string display();
 
 private:
 	//name of student
@@ -35,7 +38,8 @@ private:
 	//student id number at least 8 digits
 	std::string stu_id;
 	//student class year in numbers from 1-4
-	int stu_year;
+	std::string stu_year;
+	
 
 
 };

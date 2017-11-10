@@ -7,15 +7,29 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "DataManager.h"
 
 int main()
 {
+	DataManager dm("../studentdata.txt");
+	Student s1 = Student("Jian Yang", "11100011", "International Studies", "1");
+	Student s2 = Student("Patrick Brocato", "11100010", "Women's Studies", "1");
+	Student s3 = Student("Taylan Thomas", "10100011", "Liberal Arts", "1");
+	Student s4 = Student("Meghan Raymond", "11000011", "Communications", "1");
+	dm.addStudent(s1);
+	dm.addStudent(s2);
+	dm.addStudent(s3);
+	dm.addStudent(s4);
+
+	dm.display();
+	std::cout << "\n" << std::endl;
+
 	//Default test variable of Student Class
 	Student myStudent;
 
 	//Multi parameter made Students
-	Student myStudent2("Chase", "00000001", "Computer Science", 2);
-	Student myStudent3("Jasmine", "00000142", "Psychology", 3);
+	Student myStudent2("Chase", "00000001", "Computer Science", "2");
+	Student myStudent3("Jasmine", "00000142", "Psychology", "3");
     
 	//Vector to hold students
 	std::vector<Student> students = { myStudent, myStudent2, myStudent3 };
@@ -34,7 +48,7 @@ int main()
 	//Setting different variables among the vector elements
 	first_student.setStudentID("00000011");
 	p_second_student->setStudentMajor("Liberal Arts"); 
-	r_third_student.setStudentYear(1);
+	r_third_student.setStudentYear("1");
 
 	//This is just formatting some clarity for my purpose in the output
 	std::cout << "------------------------------" << std::endl;
