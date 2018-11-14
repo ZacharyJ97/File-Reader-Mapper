@@ -13,12 +13,12 @@ Student::Student()
 {
 	name = "Unknown";
 	stu_major = "Undecided";
-	stu_id = "11111111";
+	stu_id = 11111111;
 	stu_year = "0";
 }
 
 //Overloaded/4-parameter student
-Student::Student(std::string new_name, std::string new_id, std::string new_major, string new_year) : name(new_name), stu_major(new_major), stu_id(new_id), stu_year(new_year) {}
+Student::Student(std::string new_name, int new_id, std::string new_major, string new_year) : name(new_name), stu_major(new_major), stu_id(new_id), stu_year(new_year) {}
 
 
 //Set methods for each private variable
@@ -33,18 +33,10 @@ void Student::setStudentMajor(const std::string &input_major)
 	stu_major = input_major;
 }
 
-//Set student ID with verfication of length requirement
-void Student::setStudentID(const std::string &input_id)
+//Set student ID 
+void Student::setStudentID(int input_id)
 {
-	const int REQ_SIZE = 8;
-	bool all_digits = false;
 	stu_id = input_id;
-
-	if (stu_id.length() != 8)
-	{
-		std::cout << "The entered student ID is not exactly 8 characters/digits long. The ID will be set to default 11111111." << std::endl;
-		stu_id = "11111111";
-	}
 }
 
 //Setter function
